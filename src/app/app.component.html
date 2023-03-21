@@ -1,3 +1,40 @@
-<H3>My First Angular App.</H3>
 
-<router-outlet></router-outlet>
+<div style="display: list-item; border-bottom: solid gray; height: 10%;">
+    <div style="float: left;"><H3>{{header}}</H3></div>
+     <div style="float: right;margin-right: 10px;"><a href="#"> Sign In</a></div>
+</div>
+
+<div style="display: list-item; width: 100%; height: 80%;">
+   
+    <div style="float: left; border-right: solid gray; width: 10%; height: 80%;">
+        <nav>
+            <a routerLink="/display">Employees</a>
+        </nav>
+        <div></div>
+        <nav>
+            <a routerLink="/add">Add Employee </a>
+        </nav>
+        <!--  <nav>
+            <a (click)="display()" style="color: blue;" >Employees</a>
+        </nav>
+        <nav>
+            <a (click)="add()" style="color: blue;" >Add Employee</a>
+        </nav>-->
+         
+    </div>
+    <div style="float: left; width: 70%; height: 80%;margin: 10px 10px;">
+       <router-outlet></router-outlet> 
+       <!--<ng-container *ngIf="isDisplayEmployee" >
+            <app-display-list ></app-display-list>
+       </ng-container>
+       <ng-container *ngIf="isAddEmployee" >
+            <app-create-employee (add) = "saveEmployee($event)"></app-create-employee>
+        </ng-container> -->
+    </div>
+</div>
+<div style="float: right;">
+    <div style="float: right;margin-right: 10px;"><H3>Copyright 2023 @ Mahi</H3></div>
+</div>
+
+
+

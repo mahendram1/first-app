@@ -1,0 +1,28 @@
+<p style="margin-left: 10%;">Employee Profile Form</p>
+<div style="margin-left: 10%; color: red;size: 14px;">{{errorMessage}}</div>
+<div style="margin-left: 2%;" >
+    <div class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Emp ID</mat-label>
+          <input matInput [(ngModel)]="emp.empId" required="" type="number">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="emp.name" required="true">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>email</mat-label>
+            <input matInput [(ngModel)]="emp.email" required="true">
+          </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Address</mat-label>
+          <textarea matInput [(ngModel)]="emp.address" placeholder="Enter your address"></textarea>
+        </mat-form-field>
+        <section style=" float: right;">
+            <button mat-raised-button (click)="cancel()">Cancel</button>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <button mat-raised-button color="primary" (click)="addEmployee()">Save</button>
+        </section>
+           
+    </div>
+</div>

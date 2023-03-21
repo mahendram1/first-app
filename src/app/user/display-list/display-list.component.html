@@ -1,0 +1,22 @@
+<div style="margin-left: 10%; color: red;size: 14px;">{{message}}</div>
+<table border="1">
+    <tr>
+        <th > Id </th>
+        <th > Name  </th>
+        <th >Email </th>
+        <th >Address </th>
+        <th > Delete </th>
+    </tr>
+    <tr *ngFor="let emp of empList" style="text-align:left;">
+        <td > {{emp.empId }}</td>
+        <td > {{emp.name}}  </td>
+        <td >{{emp.email}} </td>
+        <td >{{emp.address}} </td>
+        <td >
+            <a mat-button style="color: blue;" (click)="delete(emp.empId)">Delete</a>
+        </td>
+    </tr>
+
+  </table>
+  
+  
